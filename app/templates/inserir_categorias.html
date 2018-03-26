@@ -1,0 +1,22 @@
+{% extends "layout.html" %} {% block conteudo %}
+<h6>Cadastrar Categoria</h6>
+<form>
+  <div class="form-group bg-light">
+    <h6>Nome <input type="text" nome="tNome" id="cNome" size="30" maxlength="20" placeholder="{{ msg_nome}}"></h6>
+  <div class="form-group">
+    <h6 for="categ">Categorias</h6>
+    <select class="form-control" id="categ">
+      {% for categ in categs %} {% if id_categ_selecionada == categ.id %}
+      <option selected value="{{categ.nome}}"> {{categ.nome}}</option>
+      {% else %}
+      <option value="{{categ.id}}"> {{categ.nome}}</option>
+      {% endif %} {% endfor %}
+    </select>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary">Salvar</button>
+    <button type="button" class="btn btn-secondary">Close</button>
+  </div>
+</div>
+</form>
+{% endblock %}

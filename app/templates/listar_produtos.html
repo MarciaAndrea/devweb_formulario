@@ -1,0 +1,48 @@
+{% extends "layout.html" %} {% block conteudo %}
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td></td>
+                <td>Id</td>
+                <td>Nome</td>
+                <td>Quantidade</td>
+                <td>Preço</td>
+                <td>Data</td>
+                <td>Categoria id</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prod in prod %}
+            <tr>
+                <td>
+                    <a href="{{ url_for('editar_produtos', id = prod.id )}}">
+                        Editar Prodouto
+                    </a>
+                </td>
+                <td>
+                    {{prod.id}}
+                </td>
+                <td>
+                    {{prod.nome}}
+                </td>
+                <td>
+                    {{prod.qtde}}
+                </td>
+                <td>
+                    {{prod.preco}}
+                </td>
+                <td>
+                    {{prod.data}}
+                </td>
+                <td>
+                    {{prod.id_categ}}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

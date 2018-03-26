@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% block conteudo %}
+<form>
+    <div class="py-4 text-dark bg-light">
+        <fieldset id="Produto"><h5>Cadastrar Produto</h5>
+            <h6> Código <input type="codigo" nome="tcodigo" id="ccodigo" size="30" maxlength="20" placeholder="{{ msg_id}}"/></h6>
+            <h6> Nome <input type="Nome" nome="tNome" id="cNome" size="30" maxlength="20" placeholder="{{ msg_nome}}"/></h6>
+            <h6> Total <input type="qtde" nome="tqtde" id="cqtde" size="30" maxlength="20" placeholder="{{ msg_qtde}}"/></h6>
+            <h6> Preço <input type="preco" nome="tPreco" id="cPreco" size="30" maxlength="20" placeholder="{{ msg_preco}}"/></h6>
+            <h6> Data <input type="date" nome="tFab" id="cFab" placeholder="{{ msg_data}}"/></h6>
+        </fieldset>
+    <div class="form-group">
+        <h6 for="categoria">Categorias</h6>
+            <select class="form-control" id="categoria">
+            {% for categs in categs %} {% if id_categs_selecionada == categs.id %}
+                <option selected value="{{categs.id}}"size="30" maxlength="20"> {{categs.nome}} </option>
+                {% else %}
+                <option value="{{categs.id}}"> {{categs.nome}}</option>
+                  {% endif %} {% endfor %}
+            </select>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Salvar</button>
+        <button type="button" class="btn btn-secondary">Close</button>
+    </div> 
+    </div>
+</form>
+{% endblock %}

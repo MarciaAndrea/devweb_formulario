@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block conteudo %}
+<div class="py-4 text-dark bg-light">
+    <div class="container">
+      <div class="row">   
+        <div class="col-md-4">
+            <h4 class="text-dark">Categoria</h4>
+              <form>
+                <fieldset id="id">
+                  <h6>Código <input type="text" nome="tNome" value="{{id_categ_selecionada}}" id="cNome" size="20" maxlength="20" disabled/></h6>
+                  <h6>Nome <input type="text" nome="tNome" value="{{nome}}" id="cNome" size="20" maxlength="30" disabled/></h6>
+                  </fieldset>
+              </form>
+          </div>
+        </div> 
+   </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %} {% block conteudo %}
+<div class="row">
+            <div class="py-5 m-4 h-100">
+                <class="container">
+                  <div class="row" >
+                    <div class="col-md-12">
+                        <h2 class="text center">Bem Vindo</h2>
+                        <img src="{{url_for('static', filename ='img/spices-2548653_1920.jpg')}}" height="250px" width="550px">
+                        <p></p>
+                        <p>Natuvida é um empresa que fornece os melhores e mais variados produtos naturais.</p> 
+                        <p>A missão da Natuvida é proporcionar aos seus clientes produtos que tragam saúde e bem está.</p>
+                        <p>Venha conhecer nossos produtos, aqui você se sentirar mais próximo da natureza, setirá os cheiros e os sabores da vida.
+                        </p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <ul class="nav-item dropdown bg-light">
+                <a class="nav-link" href="{{ url_for('inserir_categorias')}}">Cadastrar Categoria</a>
+                <a class="nav-link" href="{{ url_for('listar_categorias')}}">Listar Categoria</a>                
+                <a class="nav-link" href="{{ url_for('inserir_produtos')}}">Cadastrar Produto</a>
+                <a class="nav-link" href="{{ url_for('listar_produtos')}}">Listar Produto</a>                
+            </ul>
+{% endblock %}

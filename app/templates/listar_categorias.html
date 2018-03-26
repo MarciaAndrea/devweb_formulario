@@ -1,0 +1,32 @@
+{% extends "layout.html" %} {% block conteudo %}
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td></td>
+                <td>Id</td>
+                <td>Nome</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for categoria in categs %}
+            <tr>
+                <td>
+                    <a href="{{ url_for('editar_categorias', id = categoria.id )}}">
+                        Editar Categoria
+                    </a>
+                </td>
+                <td>
+                    {{categoria.id}}
+                </td>
+                <td>
+                    {{categoria.nome}}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}
